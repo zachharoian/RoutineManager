@@ -14,6 +14,9 @@ namespace App1
         {
             base.ViewDidLoad();
 
+            //  Test data
+            string[] data = new string[] {"Blue", "Red", "Green", "Brown" };
+
             // Perform any additional setup after loading the view, typically from a nib.
 
             //  Create the table view.
@@ -23,7 +26,10 @@ namespace App1
             _table = new UITableView
             {
                 //  0, 0 -> Position in top left corner, and let it take the width and height of screen.
-                Frame = new CoreGraphics.CGRect(0, 0, View.Bounds.Width, View.Bounds.Height)
+                Frame = new CoreGraphics.CGRect(View.Frame.Left, View.Frame.Top, View.Bounds.Width, View.Bounds.Height),
+
+                //  Insert data
+                Source = new TableSource(data)
             };
 
             //  Display the table view on screen
