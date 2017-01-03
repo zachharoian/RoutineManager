@@ -32,6 +32,13 @@ namespace App1
             return tableItems.Length;
         }
 
+        //  When the row is touched
+        public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+        {
+            //  Displays alert when touched
+            new UIAlertView("Alert", "You touched: " + tableItems[indexPath.Row], null, "OK", null).Show ();
+
+        }
 
         //  Custom method for cell retreival
         public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
