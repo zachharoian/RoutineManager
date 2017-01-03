@@ -25,8 +25,8 @@ namespace App1
             //  Initalize the table view
             _table = new UITableView
             {
-                //  0, 0 -> Position in top left corner, and let it take the width and height of screen.
-                Frame = new CoreGraphics.CGRect(View.Frame.Left, View.Frame.Top, View.Bounds.Width, View.Bounds.Height),
+                //  0, 20 (For notification bar) -> Position in top left corner, and let it take the width and height-20 of screen.
+                Frame = new CoreGraphics.CGRect(View.Frame.Left, View.Frame.Top+20, View.Bounds.Width, View.Bounds.Height-20),
 
                 //  Insert data
                 Source = new TableSource(data)
