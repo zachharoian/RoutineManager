@@ -16,8 +16,17 @@ namespace App1
 
 
             //  Test data
-
-            // Perform any additional setup after loading the view, typically from a nib.
+            EventData[] data = new EventData[4];
+            data[0] = new EventData("Red","NewDefault1");
+            data[1] = new EventData();
+            data[2] = new EventData();
+            data[3] = new EventData();
+            data[1].Title = "Blue";
+            data[1].Desc = "Default2";
+            data[2].Title = "Green";
+            data[2].Desc = "Default3";
+            data[3].Title = "Yellow";
+            data[3].Desc = "Default4";
 
             //  Create the table view.
             UITableView _table;

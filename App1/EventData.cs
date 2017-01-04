@@ -7,14 +7,21 @@ namespace App1
     public class EventData
     {
         //  Event Properties
-        string title { get; set; }
-        string desc { get; set; }
+        public string Title { get; set; }
+        public string Desc { get; set; }
 
         //  Constructor
+        public EventData ()
+        {
+
+        }
+
+        //  Overloaded Constructor
         public EventData(string tempTitle, string tempDesc)
         {
-            title = tempTitle;
-            desc = tempDesc;
+            Title = tempTitle;
+            Desc = tempDesc;
         }
+
     }
 }
