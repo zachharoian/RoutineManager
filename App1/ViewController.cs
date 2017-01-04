@@ -14,8 +14,8 @@ namespace App1
         {
             base.ViewDidLoad();
 
+
             //  Test data
-            string[] data = new string[] {"Blue", "Red", "Green", "Brown" };
 
             // Perform any additional setup after loading the view, typically from a nib.
 

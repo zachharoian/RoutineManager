@@ -4,8 +4,17 @@ using System.Text;
 
 namespace App1
 {
-    class EventData
+    public class EventData
     {
-            private String name;
+        //  Event Properties
+        string title { get; set; }
+        string desc { get; set; }
+
+        //  Constructor
+        public EventData(string tempTitle, string tempDesc)
+        {
+            title = tempTitle;
+            desc = tempDesc;
+        }
     }
 }
