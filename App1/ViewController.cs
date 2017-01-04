@@ -1,6 +1,9 @@
 ﻿using System;
 
+//  Interface Package
 using UIKit;
+using SQLite;
+using System.IO;
 
 namespace App1
 {
@@ -28,6 +31,10 @@ namespace App1
             data[3].Title = "Yellow";
             data[3].Desc = "Default4";
 
+            DataAccess.SaveObject(data[1]);
+            //DataAccess.SaveObject(data[1]);
+            //DataAccess.SaveObject(data[2]);
+            // DataAccess.SaveObject(data[3]);
             //  Create the table view.
             UITableView _table;
 
