@@ -30,6 +30,7 @@ namespace App1
         {
             //  Returns how many items are in the array.
             return tableItems.Length;
+
         }
 
         //  When the row is touched
@@ -38,6 +39,8 @@ namespace App1
             //  Displays alert when touched
             new UIAlertView("Alert", "You touched: " + tableItems[indexPath.Row], null, "OK", null).Show ();
 
+            //  Unselect row when completed, and show an animation for it.
+            tableView.DeselectRow(indexPath, true);
         }
 
         //  Custom method for cell retreival
@@ -48,10 +51,13 @@ namespace App1
 
             //  Checks if a cell needs to be created, and allows the cell to be recycled
             if (cell == null)
-                cell = new UITableViewCell(UITableViewCellStyle.Default, cellIdentifier);
+                cell = new UITableViewCell(UITableViewCellStyle.Subtitle, cellIdentifier);
 
             //  Change the text of the cell
             cell.TextLabel.Text = tableItems[indexPath.Row];
+
+            //  Change the subtitle of the cell
+            cell.DetailTextLabel.Text = "Default Text";
             return cell;
 
         }
