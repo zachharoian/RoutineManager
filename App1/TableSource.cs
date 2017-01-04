@@ -37,7 +37,7 @@ namespace App1
         public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
         {
             //  Displays alert when touched
-            new UIAlertView("Alert", "You touched: " + tableItems[indexPath.Row], null, "OK", null).Show ();
+            new UIAlertView("Hey!", "You touched " + tableItems[indexPath.Row], null, "OK", null).Show ();
 
             //  Unselect row when completed, and show an animation for it.
             tableView.DeselectRow(indexPath, true);
